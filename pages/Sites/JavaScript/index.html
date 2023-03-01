@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <!--Отображение страницы в масштабе 100%-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Для корректного отображения в старых браузерах-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript</title>
+    <!--нормализуем стили-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!--подключаем собственные стили-->
+    <link rel="stylesheet" href="../../css/main.css">
+    <!--подключаем фавикон-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/fav/maxresdefault.jpg">
+    <!--подключаем шрифты-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html, body {
+            font-family: 'Montserrat', sans-serif;
+            min-width: 300px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .img-comp-container {
+            position: relative;
+            height: 400px;
+        }
+
+        .img-comp-img {
+            position: absolute;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .img-comp-img img {
+            display: block;
+            vertical-align: middle;
+        }
+
+        .img-comp-slider {
+            position: absolute;
+            z-index: 9;
+            cursor: ew-resize;
+            width: 30px;
+            height: 30px;
+            background-color: aqua;
+            opacity: 0.7;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<h4>Изменяю содержимое HTML</h4>
+<p id="demo">JavaScript — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный
+    и функциональный стили.</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Что я сейчас сказала?!"'>Ну-ка еще раз
+</button>
+<h4>Изменяю содержимое значения атрибутов HTML</h4>
+<img id="myImage" src="img/GoodTomato_806x538.jpg" style="height: 300px"><br>
+<button onclick="document.getElementById('myImage').src='img/TomatoSmashed_570x454.jpg'">Oops..</button>
+<button onclick="document.getElementById('myImage').src='img/GoodTomato_806x538.jpg'">I'm fine</button>
+<h4 id="demo">Меняю стиль HTML</h4>
+<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Ничего не видно О_о</button>
+<h4>Скрываю и показываю элементы HTML</h4>
+<button type="button" onclick="document.getElementById('demo1').style.display='block'">Что тут у нас?</button>
+<p id="demo1" style="display: none">Ой, не смотри не смотри</p>
+<button type="button" onclick="document.getElementById('demo1').style.display='none'">Спрятать</button>
+<h4>Подключаю внешние сценарии</h4>
+<p id="demo2">OK. Повторю еще раз: JavaScript — мультипарадигменный язык программирования. Поддерживает
+    объектно-ориентированный, императивный и функциональный стили.</p>
+<button type="button" onclick="myFunction()">Лучше не нажимать</button>
+<h4>Возможности отображения данных</h4>
+<h5>Свойство innerHTML</h5>
+<p>Свойство innerHTML представляет собой содержимое элемента (элементы-потомки, комментарии, текст и т.д.), которое
+    хранится в нем в виде строки. Свойство доступно для чтения и записи, поэтому у нас есть возможность получать и
+    изменять содержимое элемента. При этом, свойство innerHTML отсутствует у пустых элементов, его можно применять
+    только с теми элементами, которые имеют открывающий и закрывающий тег.<br>Например, сделаем вычисления: 22+6 -></p>
+<p id="demo3"></p>
+<h5>Метод document.write()</h5>
+<p>Метод document.write() выводит на страницу переданные ему аргументы. Этот метод работает только на этапе загрузки
+    страницы. Если document.write() вызвать после того, как страница загрузилась, то результатом будет перезаписанная
+    страница с текстом, который был добавлен с помощью document.write().<br>При полной загрузке HTML-документа с помощью
+    document.write() <strong>будет удален весь существующий HTML-код</strong>:</p>
+<button type="button" onclick="document.write('Ну вот и все - пара-пара-пам!')">Поехали!</button>
+<h5>Метод window.alert()</h5>
+<p>Метод window.alert() выводит на экран модальное окно с сообщением. Модальное окно означает, что выполнение сценария и
+    дальнейшее взаимодействие со страницей приостанавливается до тех пор, пока не закроется данное окно, т.е. пока не
+    будет нажата кнопка OK для продолжения работы.("Подтверждение действия на странице - лучики добра в самом начале
+    просмотра этой страницы")</p>
+<h5>Использование console.log()</h5>
+<p>Для целей отладки можно использовать метод console.log():<br>Выбираем "Сonsole" в меню инспектора</p>
+
+<hr>
+<!-- Немного практики работы с данными-->
+<h4>Немного практики</h4>
+<h5>Замена содержимого строки - метод Replace</h5>
+<button onclick="myFunction1()">Replace</button>
+<p id="demo4">Осень - Унылая пора!</p>
+<h5>Добавление нового элемента в конец массива - метод Push</h5>
+<button onclick="myFunction2()">Push</button>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<h5>Выводим приветствие по времени суток - оператор Else If</h5>
+<button onclick="myFunction3()">Привет!</button>
+<p id="demo7"></p>
+
+<hr>
+<!-- Немного практикиработы с изображениями -->
+<h5>Ползунок сравнения изображений</h5>
+<div class="img-comp-container">
+    <div class="img-comp-img">
+        <img src="img/spring.jpg" alt="весна" width="610" height="400">
+    </div>
+    <div class="img-comp-img img-comp-overlay">
+        <img src="img/autumn.jpg" alt="весна" width="610" height="400">
+    </div>
+</div>
+<!-- Кнопка возврата -->
+<a style=" color: #7CACD7; font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none; display: inline-block; background-color: #286196; border-radius: 10px; padding: 8px 25px; text-align: center; position: relative; left: 50%; transform: translate(-50%, 0); margin: 15px 0;"
+     href=" ../index_Sites.html" class="button_back">&larr; Назад</a>
+
+<script>
+    // Подключаю внешние сценарии
+    function myFunction() {
+        document.getElementById("demo2").innerHTML = "Ну вот, опять.. Второй раз повторять не буду";
+    }
+
+    // Отображение данных через innerHTML
+    document.getElementById("demo3").innerHTML = 22 + 6;
+
+    // Отображение данных через document.write
+    document.write("Ну вот и все - пара-пара-пам!");
+
+    // Отображение данных через window.alert
+    window.alert("Для продолжения просмотра нужно дать добро")
+
+    // Отображение данных через console.log
+    console.log("Смотрю тут: что и где сикося накося")
+
+    // Работа со строками - метод Replace
+    function myFunction1() {
+        var str = document.getElementById("demo4").innerHTML;
+        var txt = str.replace("Унылая пора!", "Очей очарованье!");
+        document.getElementById("demo4").innerHTML = txt;
+    }
+
+    // Работа с массивом - метод Push
+    var txt = ["Унылая пора ", "Очей очарованье "]
+    document.getElementById("demo5").innerHTML = txt;
+
+    function myFunction2() {
+        document.getElementById("demo6").innerHTML = txt.push("Приятна мне твоя прощальная краса..");
+        document.getElementById("demo5").innerHTML = txt;
+    }
+
+    // Выводим дату и время браузера
+    function myFunction3() {
+        var greeting;
+        var time = new Date().getHours();
+        if (time < 10) {
+            greeting = "Доброе утро!";
+        } else if (time < 20) {
+            greeting = "Удачного дня!";
+        } else {
+            greeting = "Хорошего вечера!";
+        }
+        document.getElementById("demo7").innerHTML = greeting;
+    }
+
+    // Ползунок сравнения изображений
+    function initComparisons() {
+        var x, i;
+        x = document.getElementsByClassName("img-comp-overlay");
+        for (i = 0; i < x.length; i++) {
+            compareImages(x[i]);
+        }
+
+        function compareImages(img) {
+            var slider, img, clicked = 0, w, h;
+            w = img.offsetWidth;
+            h = img.offsetHeight;
+            img.style.width = (w / 2) + "px";
+            slider = document.createElement("DIV");
+            slider.setAttribute("class", "img-comp-slider");
+            img.parentElement.insertBefore(slider, img);
+            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+            slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+            slider.addEventListener("mousedown", slideReady);
+            window.addEventListener("mouseup", slideFinish);
+            slider.addEventListener("touchstart", slideReady);
+            window.addEventListener("touchstop", slideFinish);
+
+            function slideReady(e) {
+                e.preventDefault();
+                clicked = 1;
+                window.addEventListener("mousemove", slideMove);
+                window.addEventListener("touchmove", slideMove);
+            }
+
+            function slideFinish() {
+                clicked = 0;
+            }
+
+            function slideMove(e) {
+                var pos;
+                if (clicked == 0) return false;
+                pos = getCursorPos(e)
+                if (pos < 0) pos = 0;
+                if (pos > w) pos = w;
+                slide(pos);
+            }
+
+            function getCursorPos(e) {
+                var a, x = 0;
+                e = e || window.event;
+                a = img.getBoundingClientRect();
+                x = e.pageX - a.left;
+                x = x - window.pageXOffset;
+                return x;
+            }
+
+            function slide(x) {
+                img.style.width = x + "px";
+                slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+            }
+        }
+    }
+
+    initComparisons();
+
+</script>
+</body>
+</html>

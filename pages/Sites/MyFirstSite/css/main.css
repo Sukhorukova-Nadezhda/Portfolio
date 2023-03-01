@@ -1,0 +1,225 @@
+html, body {    
+    font-family: 'Montserrat', sans-serif;
+    min-width: 300px;
+    margin: 0;
+    font-size: 20px;
+}
+img {    
+    display: inline-block;}
+a { 
+    text-decoration: none;
+    transition: 0.5s ease-out;}
+* {
+    box-sizing: border-box;}
+
+/*#756171 серо-фиолет 	#7ea299  голуб.бирюза	#bac298  грязно-салат	
+#0c68be синий насыщ 	#3980b4 голуб/
+
+/*---------GRID-------*/
+
+.container {
+    width: 100%;
+}
+.row {
+    margin-left: 10%;
+    margin-right: 10%;   
+}
+.row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.c-4 {
+    width: 400px;
+    float: left;
+    margin-left: 40px;
+}
+.c-4:last-child {
+    margin-right: 0px;
+}
+
+/*--------HEADER------*/
+
+.header {
+    background-image: url(../img/fon.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    height: 100vh;
+    color: gold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+.h_title {
+    font-size: 50px;
+    margin-top: -600px;
+}
+.h_slogan {
+    font-size: 80px;
+    font-weight: 900;
+    margin-top: 100px;
+}
+.h_arrow {
+    font-size: 60px;
+    width: 50px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+}
+
+/*---------BODY-------*/
+.title {
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    padding: 140px 0px 100px;
+    color: #0c68be;
+}
+.gallery {
+    margin: 10px;
+    float: left;
+}
+.gallary img {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    margin-left: 50px;
+}
+.desc {
+    margin-bottom: 100px;
+    text-align: center;
+    font-weight: 900;
+    color: #0c68be;
+}
+.desc:hover {color: black;}
+
+/*--------Single pages------*/
+
+.mechta {
+    padding: 5px;
+    color: #0c68be;
+    text-align: center;
+}
+.mechta img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    height: 800px;
+}
+.button_back {
+    margin-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #4292DF;
+    border-color: white;
+    border-style: solid;
+    border-radius: 45px;
+    padding: 8px 25px;
+}
+.button_back:hover {
+    color: black;
+    background-color: #FFC300;
+}
+
+/*--------FOOTER------*/
+
+.footer {
+    width: 100%;
+    background-color: #0c68be;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.footer p {
+    margin-top: 0px;
+    margin margin-bottom: 15px;
+}
+p.ft_name {
+    font-size: 26px;
+}
+p.ft_soc {
+    font-size: 20px;
+    text-align: center;
+}
+p.ft_soc_icon {
+    font-size: 26px;
+    text-align: center;
+}
+p.ft_soc_icon a {
+    text-decoration: none;   
+    color: white;
+}
+p.ft_soc_icon a:hover {
+    color: #FFC300;    
+}
+.button {
+    margin-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #4292DF;
+    border-color: white;
+    border-style: solid;
+    border-radius: 45px;
+    padding: 8px 25px;
+}
+.button:hover {
+    color: black;
+    background-color: #FFC300;
+}
+
+/*------ADAPTATION----*/
+
+@media (max-width:400px) {
+    .container {width: 100%;}
+    .row {
+        display: block;
+    }
+    .c-4 {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .header {
+        padding: 200px 10px 50px 10px;
+    }
+    .h_title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 14px;
+    }
+    .h_slogan {
+        font-size: 30px;
+        line-height: 20px;
+    }
+    .h_arrow {
+        font-size: 40px;
+        position: absolute;
+        bottom: 420px;
+        left: 50%;
+    }
+    .title {
+        font-size: 20px;
+        margin: 0 20px;
+    }
+    .row {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .footer {
+        padding: 20px 10px 10px 10px;
+    }
+}
