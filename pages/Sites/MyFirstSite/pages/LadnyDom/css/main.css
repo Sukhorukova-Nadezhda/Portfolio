@@ -1,0 +1,56 @@
+* {box-sizing: border-box}
+p, ul {
+    color: dimgray;
+    font-family: cursive;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+ul {text-align: left;}
+
+img {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+}
+a, address, i {
+    color: dimgray;
+    font-family: serif;
+}
+.column {
+    float: left;
+    padding: 0px;
+}
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;    
+}
+.menu {
+    width: 15%;
+}
+.cont {
+    width: 85%;
+    font-size: 110%;
+    text-align: center;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px 10px;
+}
+.menu li {
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: #E2D9DA;
+    color: dimgray;
+}
+.menu li:hover {background-color: orange;}
+.kontakty {
+    font-size: 100%;  
+    margin: auto;
+    background-color: #E2D9DA;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
