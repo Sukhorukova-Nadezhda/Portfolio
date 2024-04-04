@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio_new</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!--подключаем собственные стили-->
+    <link rel="stylesheet" href="styles.css">
+    <!--подключаем фавикон-->
+    <link rel="shortcut icon" type="image/x-icon" href="img/fav/favicon.png">
+    <!--подключаем шрифты-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<!--
+Основной Цвет:
+#286296	#335371	#0D3A62	#5B96CB	#79A4CB   синий: яркий / тускло-серый / темный / светлый / очень светлый
+Вторичный Цвет A:
+#E8BC31	#AE9547	#977610	#F3D163	#F3DA8A   шафрановый: яркий / тускло-серый / темный / светлый / очень светлый
+Вторичный Цвет B:
+#E86A31	#AE6747	#973A10	#F39063	#F3AB8A   рыжий: яркий / тускло-серый / темный / светлый / очень светлый
+
+близкий к синему - светло зеленый #66D6C0
+-->
+
+<!--  MENU -->
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+    <div class="dropdown open">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="background-color: #7CACD7;">Мои работы
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="pages/Sites/index_Sites.html">Сайты</a>
+            <a class="dropdown-item" href="pages/Content/index_Content.html">Контент</a>
+            <a class="dropdown-item" href="pages/Design/index_Design.html">Дизайн</a>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" target="_blank"
+                   href="https://spb.hh.ru/resume/140a041dff09cc99e50039ed1f4a733579504f">Резюме</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="pages/Dummy/index_Dummy.html">Блог</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="pages/Dummy/index_Dummy.html">Отзывы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pages/Dummy/index_Dummy.html">Контакты</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--  BANNER -->
+<div class="banner">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="intro col-sm-6 offset-sm-6" style="margin-top: 70px; margin-right: 50px;">
+                <blockquote class="blockquote">
+                    <h1><strong>— Вы знаете почему небо голубого цвета? <br>— Нет <br>— Потому что я не люблю красный и покрасила его в голубой</strong></h1><br>
+                    <p>&copy; Джия, Nishabd (2007)</p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="arrow"><a href="#container" class="fa fa-angle-down" aria-hidden="true"></a></div>
+    </div>
+</div>
+
+<!--  CONTENT -->
+
+<div class="container" id="container" style="margin-top:50px; padding-top: 100px;">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Немного обо мне</h3>
+            <div class="circle" style="margin: 30px auto">
+                <img src="img/DSC_0020.JPG" width="300px" alt="Мое фото" class="img-fluid rounded-circle border-dark"
+                     style="border: 2px solid gray"></div>
+            <p>Приветствую вас на своей web-странице, посвященной моему новому увлечению, а именно <strong>Веб-дизайн и
+                разработка сайтов (HTML/CSS и JavaScript).</strong><br> Меня зовут Надежда.<br> Раньше мне не
+                приходилось сталкиваться с программированием, хотя работа всегда была тесно связана с компьютером: 8 лет
+                работы специалистом по таможенному оформлению, потом два года в логистике. Сейчас, после декретного
+                отпуска, решила попробовать новое для меня направление с возможностью удаленной работы из дома.<br>
+                С июня 2022 года изучаю как frontend-разработку, так и разработку дизайн-макетов в программе
+                Figma. Мои работы вы можете посмотреть в отдельных вкладках верхнего меню сайта.</p>
+            <hr class="d-sm-none">
+        </div>
+        <div class="col-sm-8">
+            <h3>Мой первый макет дизайна полноценного сайта интернет-магазина</h3>
+            <div class="gallary1" style="margin-top: 20px">
+                <a target="_blank" href="pages/Design/img/Project%203_1440.jpg">
+                    <img src="img/carousel/UX,UI-design%20Project%203.jpg" class="d-block w-100"
+                         alt="Принт-скрин шапки макета"></a>
+                <p>Первый полноценный проект по UX/UI-дизайну сайта интернет магазина, созданный в рамках прохождения
+                    интенсива по основам UX/UI-дизайна в онлайн-школе "Айтилогия"</p>
+            </div>
+            <br>
+            <h3>Мой первый многостраничный сайт HTML/CSS</h3>
+            <div class="gallary1" style="margin-top: 20px">
+                <a target="_blank" href="pages/Sites/MyFirstSite/index.html">
+                    <img src="img/carousel/Screenshot_2.jpg" class="d-block w-100"
+                         alt="Принт-скрин шапки сайта"></a>
+                <p>Первый четырехстраничный адаптивный web-сайт с самописным кодом, созданный в рамках обучения на курсе
+                    университета "Синергия" по направлению Разработка сайтов: верстка HTML/CSS и программирование на
+                    языке JavaScript</p>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:50px;">
+        <div class="col-sm-3">
+            <a target="_blank" href="img/deer.JPG">
+                <img src="img/deer.JPG" class="d-block w-100"
+                     alt="Фотография картины 'Сказочный олень'"></a>
+            <p>Сказочный олень, апрель 2016</p>
+        </div>
+        <hr class="d-sm-none">
+        <div class="col-sm-9">
+            <p>Выбор на дизайн и Frontend в IT пал не случайно.<br>Сфера моей деятельности достаточно долго была
+                связана с цифрами, расчетами, различными классификаторами и нормативно-правовой документацией. Со
+                временем захотелось чего-то более творческого - ведь когда-то я даже посещала художественную школу, с
+                удовольствием рисую и сейчас.<br>Летом прошлого года наконец решилась пройти обучение по новому для себя
+                направлению. Курс показался мне очень интересным, причем как со стороны разработки макетов веб-дизайна,
+                так и непосредственно верстки сайтов (HTML/CSS). Далее я решила продолжить погружение в IT. Сейчас я
+                пока на самообучении - бесплатные курсы, интенсивы, видеоуроки и интернет-ресурсы. Далее в планах пройти
+                полноценное обучение по какому-либо конкретному направлению, с которым я пока правда не определилась.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="container-fluid" style="margin-top:110px;">
+    <div class="row">
+        <div class="footer">
+            <p>Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и
+                оформления допускается лишь с разрешения управообладателя и только со ссылкой на источник</p><br>
+            <!------ Footer Left ------>
+            <div class="ft-left">
+                <h5>&copy; Надежда Сухорукова, 2024</h5>
+                <h6>+7 (965) 037 87 00</h6>
+            </div>
+            <!----- //Footer Left ----->
+            <!------ Footer Right ------>
+            <div class="ft-right">
+                <a href="#" class="button">наверх &uarr;</a>
+            </div>
+            <!----- //Footer Right ----->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
